@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta title="Developer Source Code Presentation"/>
+    <meta name="author" content="Jaziel Lopez, Software Engineer">
+    <title>Developer Source Code Presentation</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/fullpage.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/show.meth.ecode.css"/>
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css"/>
+</head>
+<body>
+
+<header>
+
+    <h1>Source Code Presentation</h1>
+
+    <h2>Show me the code aims developers to walkthru source code in screen as you scroll up down the page.</h2>
+</header>
+<div id="mtc-main">
+
+	<div id="mtc-src">
+			<div class="section " id="section0">
+			<div>
+				<h1>abstract</h1>
+				<p>start with the usual shebang here environment if not familiar yet you will be soon enough; also im putting a documentation string in three quotes; im going to write the name of the program, my name as author and date and close the documentation string again with three quotes.
+			</div>
+		</div>
+
+		<div class="section" id="section1">
+			<div>
+				<h1>introduction</h1>
+				<p>start with the usual shebang here environment if not familiar yet you will be soon enough; also im putting a documentation string in three quotes; im going to write the name of the program, my name as author and date and close the documentation string again with three quotes.
+			</div>
+		</div>
+		<div class="section" id="section2">
+            <div>
+                <h1>initialization</h1>
+                <p>typically i define a main function to handle the flow of my program. Lets start with the most basic stuff and print out hello world.</p>
+            </div>
+		</div>
+		<div class="section" id="section3">
+            <div>
+				<h1>main</h1>
+				<p>ok closing this basic example by calling the main function; remember the step before we defined main function and now its time to run it.</p>
+			</div>
+		</div>
+	</div>
+
+	<div id="mtc-ctx">
+		
+		<div class="mtc-filename">filename.py</div>
+		
+		<div class="mtc-editor-ro">
+			<div class="mtc-editor-ro-ln"></div>
+			<div class="mtc-editor-focus">
+				<div id="demo" class="src">scrollable editor</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+<script type="text/javascript" src="javascript/fullpage.js"></script>
+<script type="text/javascript" src="javascript/show-meth-ecode.js"></script>
+<script type="text/javascript">
+
+	(function() {
+        var sections = ['abstract', 'getStarted', 'declareMain', 'runMain'];
+        
+        var callables = ['getStarted', 'declareMain', 'runMain'];
+        
+        window.addEventListener('load', function () {
+            
+            var cl;
+            
+            if (window.location.href.indexOf('#') > -1) {
+                
+                cl = window.location.href.split('#')[0];
+                
+                window.location.href = cl;
+            }
+            
+            fullpage('#mtc-src', {
+                anchors: sections,
+                navigation: true, // true,
+                navigationPosition: 'right',
+                navigationTooltips: sections
+            });
+            
+            fnMain(callables);
+            
+        }, false);
+    })();
+
+</script>
+
+</body>
+</html>
